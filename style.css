@@ -1,0 +1,26 @@
+body {
+    background-image: url(/images/background.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+}
+#main {
+    background-color: #fff;
+    position: absolute;
+    height: 98%;
+    width: 98%;
+    margin: 10px 10px 10px 10px;
+}
+.head {
+    text-align: center;
+    font-size: 54px;
+}
+#console {
+    background-color: aquamarine;
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    margin: 1% 0 0 25%;
+}
