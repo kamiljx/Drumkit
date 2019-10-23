@@ -23,4 +23,15 @@ body {
     height: 70%;
     position: absolute;
     margin: 1% 0 0 25%;
+    display: grid;
+}
+
+#consoleBtn {
+    background-color: red;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    margin: 10px;
+    float: left;
+    flex-wrap: wrap;
 }
