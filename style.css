@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 #main {
-    background-color: #fff;
+    /* background-color: #fff; */
     position: absolute;
     height: 98%;
     width: 98%;
@@ -18,22 +18,59 @@ body {
     font-size: 54px;
 }
 #console {
-    background-color: aquamarine;
     width: 700px;
     height: 700px;
     position: relative;
     margin: 1% 0 0 25%;
-    display: inline-block;
+
 }
 #row{
     margin: 5px;
-    height: 153px;
+    height: 150px;
     position: relative;
-    bottom: 0;
+
+    
 }
 #consoleBtn {
-    background-color: red;
+    background-color:whitesmoke;
     height: 150px;
     width: 150px;
     float: right;
+    font-size: 30px;
+    -webkit-box-shadow: inset 2px -1px 38px 12px rgba(197,215,219,1);
+    -moz-box-shadow: inset 2px -1px 38px 12px rgba(197,215,219,1);
+    box-shadow: inset 2px -1px 38px 12px rgba(197,215,219,1);
+    
+
 }
+#panel {
+    height: 200px;
+    width: 700px;
+    position: relative;
+    text-align: center; 
+    
+}
+#info{
+    float: left;
+    position: relative;
+    color: whitesmoke;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+#recordButton{
+font-size: 17px;
+color: white;
+background-color:transparent;
+height: 100px;
+width: 100px;
+padding: 0;
+}
+#playButton{
+    font-size: 17px;
+    color: white;
+    background-color:transparent;
+    height: 100px;
+    width: 100px;
+    padding: 0;
+    }

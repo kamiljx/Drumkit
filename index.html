@@ -13,20 +13,49 @@
             <p1> Drunkit 1.0 @ Kamil Rzeszutek</p1>
         </div>
         <div id = "console">
+        <div id="panel"> 
+            <button id="recordButton">
+                <p1> RECORD</p1>
+                <img src="/images/record.png" alt="">
+            </button>
+            <button id="playButton">
+                    <p1> Play</p1>
+                    <img src="/images/play.png" alt="">
+                </button>
+        </div>
+        <div id="info">
+            <p1> 
+                Q- BOOM<br>
+                W- CLAP<br>
+                E- HIHAT<br>
+                A- KICK<br>
+                S- OPENHAT<br>
+                D- RIDE<br>
+                Z- SNARE<br>
+                X- TINK<br>
+                C- TOM
+            </p1>
+        </div>
             <div id="row">
-                <button id="consoleBtn"class="top1"></button>
-                <button id="consoleBtn" class="top2"></button>
-                <button id="consoleBtn" class="top3"></button>
+                <button id="consoleBtn" class="top3">E
+                    <audio src="/sounds/hihat.wav" controls id="aHihat"></audio>
+                </button>
+                <button id="consoleBtn" class="top2">W
+                        <audio src="/sounds/clap.wav" controls id="aClap"></audio>
+                </button>
+                <button id="consoleBtn"class="top1">Q
+                        <audio src="/sounds/boom.wav" controls id="aBoom"></audio>
+                </button>
             </div>
             <div id="row">
-                <button id="consoleBtn" class="mid1"></button>
-                <button id="consoleBtn" class="mid2"></button>
-                <button id="consoleBtn" class="mid3"></button>
+                <button id="consoleBtn" class="mid3">D</button>
+                <button id="consoleBtn" class="mid2">S</button>
+                <button id="consoleBtn" class="mid1">A</button>
             </div>
             <div id="row">
-                <button id="consoleBtn" class="bottom1"></button>
-                <button id="consoleBtn" class="bottom2"></button>
-                <button id="consoleBtn" class="bottom3"></button>
+                <button id="consoleBtn" class="bottom3">C</button>
+                <button id="consoleBtn" class="bottom2">X</button>
+                <button id="consoleBtn" class="bottom1">Z</button>
             </div> 
             
         </div>
