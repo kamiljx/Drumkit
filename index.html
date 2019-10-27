@@ -5,60 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    
     <title>Drumkit </title>
 </head>
 <body>
     <div id ="main">
         <div class = "head">
-            <p1> Drunkit 1.0 @ Kamil Rzeszutek</p1>
+            <p1> Drumkit 1.0 @ Kamil Rzeszutek</p1>
         </div>
         <div id = "console">
-        <div id="panel"> 
-            <button id="recordButton">
-                <p1> RECORD</p1>
-                <img src="/images/record.png" alt="">
-            </button>
-            <button id="playButton">
-                    <p1> Play</p1>
+            <div id="panel"> 
+                <button id="recordButton">
+                    <p1> RECORD</p1><br>
+                    <img src="/images/record.png" alt="">
+                </button>
+                <button id="playButton">
+                    <p1> Play</p1><br>
                     <img src="/images/play.png" alt="">
                 </button>
-        </div>
-        <div id="info">
-            <p1> 
-                Q- BOOM<br>
-                W- CLAP<br>
-                E- HIHAT<br>
-                A- KICK<br>
-                S- OPENHAT<br>
-                D- RIDE<br>
-                Z- SNARE<br>
-                X- TINK<br>
-                C- TOM
-            </p1>
-        </div>
+            </div>
+            <div id="info">
+                <p1> 
+                    Q- BOOM<br>
+                    W- CLAP<br>
+                    E- HIHAT<br>
+                    A- KICK<br>
+                    S- OPENHAT<br>
+                    D- RIDE<br>
+                    Z- SNARE<br>
+                    X- TINK<br>
+                    C- TOM
+                </p1>
+            </div>
             <div id="row">
                 <button id="consoleBtn" class="top3">E
-                    <audio src="/sounds/hihat.wav" controls id="aHihat"></audio>
+                    <audio src="sounds/hihat.wav" controls id="aHihat" style="display: none"></audio>
                 </button>
                 <button id="consoleBtn" class="top2">W
-                        <audio src="/sounds/clap.wav" controls id="aClap"></audio>
+                    <audio src="sounds/clap.wav" controls id="aClap"style="display: none"></audio>
                 </button>
                 <button id="consoleBtn"class="top1">Q
-                        <audio src="/sounds/boom.wav" controls id="aBoom"></audio>
+                    <audio src="sounds/boom.wav" controls id="aBoom"style="display: none"></audio>
                 </button>
             </div>
             <div id="row">
-                <button id="consoleBtn" class="mid3">D</button>
-                <button id="consoleBtn" class="mid2">S</button>
-                <button id="consoleBtn" class="mid1">A</button>
+                <button id="consoleBtn" class="mid3">D
+                    <audio src="sounds/ride.wav" controls id="aRide"style="display: none"></audio>
+                </button>
+                <button id="consoleBtn" class="mid2">S
+                    <audio src="sounds/openhat.wav" controls id="aOpenhat"style="display: none"></audio>
+                </button>
+                <button id="consoleBtn" class="mid1">A
+                    <audio src="sounds/kick.wav" controls id="aKick"style="display: none"></audio>
+                </button>
             </div>
             <div id="row">
-                <button id="consoleBtn" class="bottom3">C</button>
-                <button id="consoleBtn" class="bottom2">X</button>
-                <button id="consoleBtn" class="bottom1">Z</button>
+                <button id="consoleBtn" class="bottom3">C
+                    <audio src="sounds/tom.wav" controls id="aTom"style="display: none"></audio>
+                </button>
+                <button id="consoleBtn" class="bottom2">X
+                    <audio src="sounds/tink.wav" controls id="aTink"style="display: none"></audio>
+                </button>
+                <button id="consoleBtn" class="bottom1">Z
+                    <audio src="sounds/snare.wav" controls id="aSnare"style="display: none"></audio>
+                </button>
             </div> 
             
         </div>
     </div>
+    <script src="index.js" type="text/javascript"></script>
 </body>
 </html>

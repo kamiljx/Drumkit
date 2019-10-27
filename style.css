@@ -37,9 +37,9 @@ body {
     width: 150px;
     float: right;
     font-size: 30px;
-    -webkit-box-shadow: inset 2px -1px 38px 12px rgba(197,215,219,1);
-    -moz-box-shadow: inset 2px -1px 38px 12px rgba(197,215,219,1);
-    box-shadow: inset 2px -1px 38px 12px rgba(197,215,219,1);
+    -webkit-box-shadow: inset 2px -1px 38px 12px rgb(136, 168, 175);
+    -moz-box-shadow: inset 2px -1px 38px 12px rgb(75, 143, 158);
+    box-shadow: inset 2px -1px 38px 12px rgb(15, 57, 66);
     
 
 }
