@@ -16,6 +16,7 @@ body {
 .head {
     text-align: center;
     font-size: 54px;
+    color:rgb(116, 116, 204);
 }
 #console {
     width: 700px;
@@ -74,3 +75,11 @@ padding: 0;
     width: 100px;
     padding: 0;
     }
+.top1:focus{
+    font-size: 17px;
+    color: rgb(139, 72, 72);
+    background-color:transparent;
+    height: 100px;
+    width: 100px;
+    padding: 0;
+}
