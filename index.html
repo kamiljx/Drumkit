@@ -15,13 +15,19 @@
         </div>
         <div id = "console">
             <div id="panel"> 
-                <button id="recordButton">
+                <form id ="formChannel"> 
+                    <input type="checkbox" name="c1" value="1"> Channel 1<br>
+                    <input type="checkbox" name="c2" value="2"> Channel 2<br>
+                    <input type="checkbox" name="c3" value="3"> Channel 3<br>
+                    <input type="checkbox" name="c4" value="4"> Channel 4
+                  </form>
+                <button id="channel1Rec">
                     <p1> RECORD</p1><br>
                     <img src="/images/record.png" alt="">
                 </button>
-                <button id="playButton">
+                <button id="channel1Play">
                     <p1> Play</p1><br>
-                    <img src="/images/play.png" alt="">
+                    <img src="/images/play.png" alt="" >
                 </button>
             </div>
             <div id="info">
@@ -38,36 +44,36 @@
                 </p1>
             </div>
             <div id="row">
-                <button id ="consoleBtn" class="top3" onclick="playHihat('hihat')">E
-                    <audio src="sounds/hihat.wav" controls id="aHihat" style="display: none"></audio>
+                <button id ="consoleBtn" class="top3" >E
+                    <audio id="hihat" src="sounds/hihat.wav"  style="display: none"></audio>
                 </button>
-                <button id="consoleBtn" class="top2" onclick="playClap('clap')">W
-                    <audio src="sounds/clap.wav" controls id="aClap"style="display: none"></audio>
+                <button id="consoleBtn" class="top2" >W
+                    <audio id="clap" src="sounds/clap.wav" style="display: none"></audio>
                 </button>
-                <button id="consoleBtn"class="top1" onclick="playBoom('boom')">Q
-                    <audio src="sounds/boom.wav" controls id="aBoom"style="display: none"></audio>
-                </button>
-            </div>
-            <div id="row">
-                <button id="consoleBtn" class="mid3" onclick="playRide('ride')">D
-                    <audio src="sounds/ride.wav" controls id="aRide"style="display: none"></audio>
-                </button>
-                <button id="consoleBtn" class="mid2" onclick="playOpenhat('openhat')">S
-                    <audio src="sounds/openhat.wav" controls id="aOpenhat"style="display: none"></audio>
-                </button>
-                <button id="consoleBtn" class="mid1"onclick="playKick('kick')">A
-                    <audio src="sounds/kick.wav" controls id="aKick"style="display: none"></audio>
+                <button id="consoleBtn"class="top1" >Q
+                    <audio id="boom" src="sounds/boom.wav" style="display: none"></audio>
                 </button>
             </div>
             <div id="row">
-                <button id="consoleBtn" class="bottom3" onclick="playTom('tom')">C
-                    <audio src="sounds/tom.wav" controls id="aTom"style="display: none"></audio>
+                <button id="consoleBtn" class="mid3" >D
+                    <audio id="ride" src="sounds/ride.wav" style="display: none"></audio>
                 </button>
-                <button id="consoleBtn" class="bottom2" onclick="playTink('tink')">X
-                    <audio src="sounds/tink.wav" controls id="aTink"style="display: none"></audio>
+                <button id="consoleBtn" class="mid2" >S
+                    <audio id="openhat" src="sounds/openhat.wav" style="display: none"></audio>
                 </button>
-                <button id="consoleBtn" class="bottom1" onclick="playSnare('snare')">Z
-                    <audio src="sounds/snare.wav" controls id="aSnare"style="display: none"></audio>
+                <button id="consoleBtn" class="mid1">A
+                    <audio id="kick" src="sounds/kick.wav" style="display: none"></audio>
+                </button>
+            </div>
+            <div id="row">
+                <button id="consoleBtn" class="bottom3" >C
+                    <audio id="tom" src="sounds/tom.wav" style="display: none"></audio>
+                </button>
+                <button id="consoleBtn" class="bottom2" >X
+                    <audio id="tink" src="sounds/tink.wav" style="display: none"></audio>
+                </button>
+                <button id="consoleBtn" class="bottom1" >Z
+                    <audio id="snare" src="sounds/snare.wav" style="display: none"></audio>
                 </button>
             </div> 
             

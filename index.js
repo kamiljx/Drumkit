@@ -1,171 +1,98 @@
+document.body.addEventListener('keypress', onKeyPress)
+document.querySelector('#channel1Rec')
+    .addEventListener('click', btnChannel1Click)
+    document.querySelector("#channel1Play").addEventListener("click",playChannel1)
+let channel1Start
+const channel1 = []
+const channel2 = []
+const channel3 = []
+const channel4 = []
+const kKey = {
+    KeyQ: '#boom',
+    KeyW: '#clap',
+    KeyE: '#hihat',
+    KeyA: '#kick',
+    KeyS: '#openhat',
+    KeyD: '#ride',
+    KeyZ: '#snare',
+    KeyX: '#tink',
+    KeyC: '#tom' 
+}
 
+function playChannel1(){
+    channel1.forEach((el) => {
+        setTimeout(() => {
+            playSound(kKey[el.sound])
+        }, el.time);
+        console.log(channel1)
+    })
+}
+function playChannel2(){
+    channel1.forEach((el) => {
+        setTimeout(() => {
+            playSound(kKey[el.sound])
+        }, el.time);
+        console.log(channel2)
+    })
+}
+function playChannel3(){
+    channel1.forEach((el) => {
+        setTimeout(() => {
+            playSound(kKey[el.sound])
+        }, el.time);
+        console.log(channel3)
+    })
+}
+function playChannel4(){
+    channel1.forEach((el) => {
+        setTimeout(() => {
+            playSound(kKey[el.sound])
+        }, el.time);
+        console.log(channel4)
+    })
+}
 
-const chanel1 = [];
-const clap = document.querySelector('#aClap');
-const boom = document.querySelector('#aBoom');
-const ride = document.querySelector('#aRide');
-const openhat = document.querySelector('#aOpenhat');
-const kick = document.querySelector('#aKick');
-const snare = document.querySelector('#aSnare');
-const hihat = document.querySelector('#aHihat');
-const tom = document.querySelector('#aTom');
-const tink = document.querySelector('#aTink');
-document.body.addEventListener('keypress', playTink);
-document.body.addEventListener('keypress', playTom);
-document.body.addEventListener('keypress', playHihat);
-document.body.addEventListener('keypress', playClap);
-document.body.addEventListener('keypress', playSnare);
-document.body.addEventListener('keypress', playBoom);
-document.body.addEventListener('keypress', playRide);
-document.body.addEventListener('keypress', playOpenhat);
-document.body.addEventListener('keypress', playKick);
-
-    function playClap(e){
-        if(e.code === "KeyW" || e === "clap"){
-            clap.currentTime = 0;
-             clap.play();
-             const time = Date.now();
-             chanel1.push({
-                 key: e.code, 
-                 time: time 
-             },
-             document.getElementsByClassName("top2")[0].style.backgroundColor = "red"); 
-         }
-         else{
-                document.getElementsByClassName("top2")[0].style.backgroundColor = "white" 
-        }
-             console.log(chanel1);
-        }
-
-    function playBoom(e){
-        if(e.code === "KeyQ" || e === 'boom'){
-            boom.currentTime = 0;
-            boom.play();
-            const time = Date.now();
-            chanel1.push({
-                key: e.code, 
-                time: time 
-            },
-            
-            document.getElementsByClassName("top1")[0].style.backgroundColor = "blue" 
-            );    
-        }
-        else{
-                document.getElementsByClassName("top1")[0].style.backgroundColor = "white" 
-        }
+function onKeyPress(e) {
+    playSound(kKey[e.code]);
+    const time = Date.now() - channel1Start;
+    const sound = {
+        sound: e.code,
+        time: time
     }
-      function playHihat(e){
-         if(e.code === "KeyE" || e === 'hihat'){
-             hihat.currentTime = 0;
-             hihat.play();
-             const time = Date.now();
-             chanel1.push({
-                 key: e.code,
-                 time: time 
-             },
-             document.getElementsByClassName("top3")[0].style.backgroundColor = "purple"); 
-            }
-            else{
-                document.getElementsByClassName("top3")[0].style.backgroundColor = "white" 
-        }
-     }
-     function playRide(e){
-        if(e.code === "KeyD" || e === 'ride'){
-            ride.currentTime = 0;
-            ride.play();
-            const time = Date.now();
-            chanel1.push({
-                key: e.code,
-                time: time 
-            },
-            document.getElementsByClassName("mid3")[0].style.backgroundColor = "orange"); 
-           }
-           else{
-               document.getElementsByClassName("mid3")[0].style.backgroundColor = "white" ;
-       }
-   }
-      function playOpenhat(e){
-         if(e.code === "KeyS" || e === 'openhat'){
-             openhat.currentTime = 0;
-             openhat.play();
-             const time = Date.now();
-             chanel1.push({
-                 key: e.code,
-                 time: time 
-             },
-             document.getElementsByClassName("mid2")[0].style.backgroundColor = "yellow"); 
-            }
-            else{
-                document.getElementsByClassName("mid2")[0].style.backgroundColor = "white" ;
-        }
-     }         
-      function playKick(e){
-         if(e.code === "KeyA" || e === 'kick'){
-             kick.currentTime = 0;
-             kick.play();
-             const time = Date.now();
-             chanel1.push({
-                 key: e.code,
-                 time: time 
-             },
-             document.getElementsByClassName("mid1")[0].style.backgroundColor = "lime"); 
-            }
-            else{
-                document.getElementsByClassName("mid1")[0].style.backgroundColor = "white" ;
-        }
-     }  
+    channel1.push(sound)
+}
 
-      function playTom(e){
-         if(e.code === "KeyC" || e === 'tom'){
-             tom.currentTime = 0;
-             tom.play();
-             const time = Date.now();
-             chanel1.push({
-                 key: e.code,
-                 time: time 
-             },
-             document.getElementsByClassName("bottom3")[0].style.backgroundColor = "green"); 
-            }
-            else{
-                document.getElementsByClassName("bottom3")[0].style.backgroundColor = "white" ;
-        }
-     }  
-      function playTink(e){
-         if(e.code === "KeyX" || e === 'tink'){
-             tink.currentTime = 0;
-             tink.play();
-             const time = Date.now();
-             chanel1.push({
-                 key: e.code,
-                 time: time 
-             },
-             document.getElementsByClassName("bottom2")[0].style.backgroundColor = "brown"); 
-            }
-            else{
-                document.getElementsByClassName("bottom2")[0].style.backgroundColor = "white" ;
-        }
-     }  
-      function playSnare(e){
-         if(e.code === "KeyZ" || e === 'snare'){
-             snare.currentTime = 0;
-             snare.play();
-             const time = Date.now();
-             chanel1.push({
-                 key: e.code,
-                 time: time 
-             },
-             document.getElementsByClassName("bottom1")[0].style.backgroundColor = "black"); 
-            }
-            else{
-                document.getElementsByClassName("bottom1")[0].style.backgroundColor = "white" ;
-        }
-     }  
+function playSound(id) {
+    const audioTag = document.querySelector(id)
+    audioTag.currentTime = 0
+    audioTag.play()
+}
+function btnChannel1Click() {
+    channel1Start = Date.now()
+}
 
 
 
-
-
-
-
-
-
+var checkBox = document.getElementById("#formChannel");
+var channelCheckbox = {
+  channel11: document.getElementById("1").value,
+  channel12: document.getElementById("2").value,
+  channel13: document.getElementById("3").value,
+  channel14: document.getElementById("4").value,
+}
+function myFunction() {
+      if (document.getElementById('1').value) 
+      {
+          return channel1
+      } if  (document.getElementById('2').value){
+          return channel2;
+      }if(document.getElementById('3').value)
+      {
+          return channel3;
+      }if(document.getElementById('4').value){
+          return channel4;
+      }
+      else{
+          alert("You didn't select channel")
+      }
+}
