@@ -1,8 +1,11 @@
 document.body.addEventListener('keypress', onKeyPress)
 document.querySelector('#channel1Rec')
     .addEventListener('click', btnChannel1Click)
-    document.querySelector("#channel1Play").addEventListener("click",playChannel1)
+    document.querySelector("#channel1Play").addEventListener("click",playChannel)
 let channel1Start
+let channel2Start
+let channel3Start
+let channel4Start
 const channel1 = []
 const channel2 = []
 const channel3 = []
@@ -18,43 +21,46 @@ const kKey = {
     KeyX: '#tink',
     KeyC: '#tom' 
 }
-
-function playChannel1(){
-    channel1.forEach((el) => {
+const pickChannel={
+    C1: document.getElementById('1').value,
+    C2: document.getElementById('2').value,
+    C3: document.getElementById('3').value,
+    C4: document.getElementById('4').value
+}
+function playChannel(){
+    if(pickChannel.C1 == true)
+    {channel1.forEach((el) => {
         setTimeout(() => {
             playSound(kKey[el.sound])
         }, el.time);
         console.log(channel1)
-    })
-}
-function playChannel2(){
-    channel1.forEach((el) => {
+    })}
+    if(pickChannel.C2 == true)
+    {channel2.forEach((el) => {
         setTimeout(() => {
             playSound(kKey[el.sound])
         }, el.time);
         console.log(channel2)
-    })
-}
-function playChannel3(){
-    channel1.forEach((el) => {
+    })}
+    if(pickChannel.C3== true)
+    {channel3.forEach((el) => {
         setTimeout(() => {
             playSound(kKey[el.sound])
         }, el.time);
         console.log(channel3)
-    })
-}
-function playChannel4(){
-    channel1.forEach((el) => {
+    })}
+    if(pickChannel.C4== true)
+    {channel4.forEach((el) => {
         setTimeout(() => {
             playSound(kKey[el.sound])
         }, el.time);
         console.log(channel4)
-    })
+    })}
 }
 
 function onKeyPress(e) {
     playSound(kKey[e.code]);
-    const time = Date.now() - channel1Start;
+    const time = Date.now() - pickCorrectChannel();
     const sound = {
         sound: e.code,
         time: time
@@ -68,31 +74,28 @@ function playSound(id) {
     audioTag.play()
 }
 function btnChannel1Click() {
-    channel1Start = Date.now()
+    pickCorrectChannel();
+    console.log(channel3);
+    console.log(channel4);
+    console.log(channel2);
+    console.log(channel1);
+
 }
 
-
-
-var checkBox = document.getElementById("#formChannel");
-var channelCheckbox = {
-  channel11: document.getElementById("1").value,
-  channel12: document.getElementById("2").value,
-  channel13: document.getElementById("3").value,
-  channel14: document.getElementById("4").value,
-}
-function myFunction() {
-      if (document.getElementById('1').value) 
+function pickCorrectChannel() {
+      if (pickChannel.C1.checked == true) 
       {
-          return channel1
-      } if  (document.getElementById('2').value){
-          return channel2;
-      }if(document.getElementById('3').value)
-      {
-          return channel3;
-      }if(document.getElementById('4').value){
-          return channel4;
+          channel1.push(sound)
+          return channel1= Date.now();
+      } if  (pickChannel.C2.checked== true){
+        channel2.push(sound)
+          return channel2 = Date.now();
+      }if(pickChannel.C3.checked== true)
+      {channel3.push(sound)
+          return channel3= Date.now();
+      }if(pickChannel.C4.checked== true){
+        channel4.push(sound)
+          return channel4= Date.now();
       }
-      else{
-          alert("You didn't select channel")
-      }
+      
 }
