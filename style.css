@@ -45,10 +45,13 @@ body {
 
 }
 #panel {
-    height: 200px;
+    
+    margin-left:20%; 
+    height: 120px;
     width: 700px;
     position: relative;
     text-align: center; 
+    flex-direction: column;
     
 }
 #info{
@@ -64,20 +67,86 @@ body {
     font-size: 18px;
     color: antiquewhite;
 }
+#rec{
+    margin-left: 25%;
+    float: left;
+    width: 150px;
+    height: 100px;
+    position: relative;
+    flex-direction: column;
+
+}
 #channel1Rec{
-font-size: 17px;
+font-size: 12px;
 color: white;
 background-color:transparent;
-height: 100px;
-width: 100px;
+height: 50px;
+width: 50px;
 padding: 0;
 }
+#channel2Rec{
+font-size: 12px;
+color: white;
+background-color:transparent;
+height: 50px;
+width: 50px;
+padding: 0;
+}
+#channel3Rec{
+font-size: 12px;
+color: white;
+background-color:transparent;
+height: 50px;
+width: 50px;
+padding: 0;
+}
+#channel4Rec{
+font-size: 12px;
+color: white;
+background-color:transparent;
+height: 50px;
+width: 50px;
+padding: 0;
+}
+#play{
+    float: left;
+width: 150px;
+height: 100px;
+position: relative;
+flex-direction: column;
+margin: 0;
+
+}
 #channel1Play{
-    font-size: 17px;
+    font-size: 12px;
     color: white;
     background-color:transparent;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    }
+#channel2Play{
+    font-size: 12px;
+    color: white;
+    background-color:transparent;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    }
+#channel3Play{
+    font-size: 12px;
+    color: white;
+    background-color:transparent;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    }
+#channel4Play{
+    font-size: 12px;
+    color: white;
+    background-color:transparent;
+    height: 50px;
+    width: 50px;
     padding: 0;
     }
 .top1:focus{
